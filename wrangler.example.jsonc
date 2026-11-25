@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "research-meeting-assistant",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-06-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "vars": { "CALENDAR_WEBHOOK_URL": "https://YOUR_WORKER_HOST/google/calendar/webhook" },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "D1_DATABASE_ID"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "logs": { "enabled": true, "invocation_logs": false }
+  }
+}

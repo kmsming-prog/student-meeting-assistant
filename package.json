@@ -1,0 +1,11 @@
+{
+  "name": "research-meeting-assistant",
+  "version": "0.4.8",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "admin": "node scripts/admin.mjs"
+  }
+}
